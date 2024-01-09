@@ -1,0 +1,18 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+<h1>Faça a reserva de seu animal!</h1>
+<p>
+  Abaixo você pode fazer a sua reserva! Confira os horários!
+</p>
+{% if sucesso %}
+  <p class="alert alert-success">Reserva concluída com sucesso!</p>
+{% else %}
+<form action="" method="POST" novalidate>
+  {% csrf_token %}
+  {% bootstrap_form form %} <!-- código do formulário gerado pelo bootstrap -->
+  <hr>
+  <button type="submit" class="btn btn-primary">Fazer a reserva!</button>
+</form>
+{% endif %}
+{% endblock %}

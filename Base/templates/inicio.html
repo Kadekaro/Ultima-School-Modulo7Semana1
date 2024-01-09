@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-bg" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Online - Reserve já o banho do seu Pet</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex aligns-items-center justify-content-center pb-3 mb-5 border-bottom">
+        <a href="http://127.0.0.1:8000/" class="d-flex text-body-emphasis text-decoration-none">
+          <h2>Pet Online</h2>
+        </a>
+    </header>
+    <nav>
+      <main>
+        {% block principal%}   <!-- Todas as páginas que extenderem daqui, irão mudar nessa parte, e o restante continuar -->
+        <div class="d-flex justify-content-between">
+          <a href="contato/" onmouseover="this.style.color='blue'" onmouseout="this.style.color='red'">
+             <div align="left">
+               <h6>Inscreva-se</h6>
+             </div>
+          </a>
+          <a href="reserva/" onmouseover="this.style.color='blue'" onmouseout="this.style.color='red'">
+            <div align="right">
+              <h6>Reserve a visita do seu pet!</h6>
+            </div>
+          </a>
+        </div>
+        {% endblock %}
+      </main>
+    </nav>
+    <footer class="pt-5 my-5 text-body-secondary border-top">
+      Curso Python ULTIMA SCHOOL
+    </footer>
+    </div>
+    <script src="static/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
